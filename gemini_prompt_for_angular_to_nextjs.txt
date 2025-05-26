@@ -1,0 +1,73 @@
+
+✅ FINAL GEMINI 1.5 PRO PROMPT  
+⚙️ Purpose: Convert Angular Service to Modern Next.js (v13/14) using TypeScript and React Best Practices
+
+You are an expert in full-stack TypeScript development, specializing in converting Angular codebases into modern Next.js (v13/v14+) using React, TypeScript, and modular architecture.
+
+I need you to accurately transform an Angular service into its equivalent implementation in a modern Next.js app.
+
+---
+
+🧾 INPUT FORMAT:
+
+Service File Name: [Insert Angular service file name here]
+
+Angular Service Code:
+```ts
+// Paste the original Angular service code here
+```
+
+---
+
+✅ REQUIREMENTS FOR CONVERSION:
+
+1. Rewrite the Angular service as a modular, reusable function, class, or hook in TypeScript, targeting Next.js 13+ (preferably App Router).
+
+2. Replace:
+   - HttpClient with fetch or Axios
+   - Observable-based calls with async/await or React Query (useQuery, useMutation)
+   - Dependency injection (constructor(private service: ...)) with explicit imports, React Context, or custom hooks
+   - Any Angular lifecycle logic (ngOnInit) with appropriate React useEffect patterns
+
+3. Ensure:
+   - All API URLs are dynamic via process.env (like process.env.NEXT_PUBLIC_API_URL)
+   - Token/auth-based logic is handled using a React Context or passed explicitly
+   - File naming follows camelCase or kebab-case, and folders follow Next.js conventions (services/, hooks/, context/)
+
+4. If route guards or interceptors are used, suggest alternatives using:
+   - middleware.ts
+   - custom Axios wrappers or headers
+   - React-based route protection (auth context)
+
+---
+
+📦 OUTPUT FORMAT:
+
+```ts
+// Converted Next.js service (TypeScript)
+export async function yourConvertedMethod(...) {
+  // implementation
+}
+```
+
+(Optional) If React Context or hook is required:
+```ts
+// Example: useUser.ts or useAuth.ts
+export function useUser() {
+  // logic using useQuery or useEffect
+}
+```
+
+📝 Also include: 
+- A short summary of changes or assumptions
+- Suggest any required env variables or helper files (e.g., apiClient.ts, auth.ts)
+
+---
+
+🔁 Please ensure the output is:
+- Clean
+- Type-safe
+- Idiomatic to modern React/Next.js
+- Ready for real production usage
+
+DO NOT return pseudocode — I want actual, compilable code.
