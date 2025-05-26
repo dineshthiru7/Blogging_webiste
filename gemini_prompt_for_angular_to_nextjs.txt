@@ -1,4 +1,18 @@
 
+I’m converting Angular service files to Next.js (React). These services may include auth logic, configuration loading, environment setup, or API communication.
+
+In Angular, services use constructors, dependency injection, and environment files to initialize values (like base URLs, tokens, or shared state) once and reuse them across the app.
+
+In Next.js, I want to:
+	•	Avoid using classes or constructors
+	•	Use function-based or module-based code
+	•	Initialize config or setup logic once and reuse it
+	•	Follow best practices with environment variables, axios/fetch for HTTP, and React state where needed
+	•	Replace Angular dependency injection with reusable imports or singleton patterns
+
+Please convert the Angular service into idiomatic Next.js code that supports these goals and works cleanly in a modern React application.
+
+
 ✅ FINAL GEMINI 1.5 PRO PROMPT  
 ⚙️ Purpose: Convert Angular Service to Modern Next.js (v13/14) using TypeScript and React Best Practices
 
